@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  position: relative;
+}
+
+.topBG {
+  height: 150px;
+  width: 100%;
+  background-color: #259688;
+}
+
+.bottomBG {
+  height: calc(100vh - 150px);
+  width: 100%;
+  background-color: #DDDCD2;
+}
+
+.box {
+  display: flex;
+  width: 80%;
+  height: calc(100% - 50px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.left {
+  width: 35%;
+  height: 100%;
+  border-right: 1px solid #D6D6D6;
+}
+
+.right {
+  width: 65%;
+  height: 100%;
+}
+
+.user {
+  width: 100%;
+  height: 90px;
+  background-color: #EAEAEA;
+}
