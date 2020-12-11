@@ -153,6 +153,7 @@ main {
 .list .container {
   display: flex;
   padding: 10px 15px;
+  cursor: pointer;
 }
 
 .list .container div:nth-child(2) {
@@ -237,7 +238,7 @@ main {
 .sent p span {
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  right: 5px;
   font-size: 0.6em;
   padding-bottom: 5px;
   color: grey;
