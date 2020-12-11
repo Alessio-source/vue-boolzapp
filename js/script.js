@@ -11,6 +11,7 @@ var app = new Vue({
     		name: 'Michele',
     		avatar: '-1',
     		visible: true,
+        active: false,
     		messages: [
     			{
     				date: '10/01/2020 15:30:55',
@@ -33,6 +34,7 @@ var app = new Vue({
     		name: 'Fabio',
     		avatar: '-2',
     		visible: true,
+        active: false,
     		messages: [
     			{
     				date: '20/03/2020 16:30:00',
@@ -55,6 +57,7 @@ var app = new Vue({
     		name: 'Samuele',
     		avatar: '-4',
     		visible: true,
+        active: false,
     		messages: [
     			{
     				date: '28/03/2020 10:10:40',
@@ -77,6 +80,7 @@ var app = new Vue({
     		name: 'Luisa',
     		avatar: '-3',
     		visible: true,
+        active: false,
     		messages: [
     			{
     				date: '10/01/2020 15:30:55',
@@ -88,8 +92,17 @@ var app = new Vue({
     				text: 'Si, ma preferirei andare al cinema',
     				status: 'received'
     			}
-    		],
+    		]
     	},
     ],
+  },
+  methods: {
+    clickContact: function (index) {
+
+      for (let i = 0; i < this.contacts.length; i++) {
+        this.contacts[i].active = false;
+      }
+      this.contacts[index].active = true;
+    },
   }
 })
