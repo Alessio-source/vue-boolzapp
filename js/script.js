@@ -94,6 +94,39 @@ var app = new Vue({
     			}
     		]
     	},
+      {
+    		name: 'Solaire',
+    		avatar: '-5',
+    		visible: true,
+        active: false,
+    		messages: [
+    			{
+    				date: '10/01/2020 15:30:55',
+    				text: 'AO hai lodato er sole oggi?',
+    				status: 'received'
+    			},
+    			{
+    				date: '10/01/2020 15:50:00',
+    				text: 'Si, è stato fantastico grazie per l\'invito',
+    				status: 'sent'
+    			},
+          {
+    				date: '10/01/2020 15:51:24',
+    				text: 'grazie a te, volevo invitare anche Artorias ma è andato dentro l\'abbisso',
+    				status: 'received'
+    			},
+          {
+    				date: '10/01/2020 15:54:36',
+    				text: 'immaggino che c\'aveva er lupo con se',
+    				status: 'sent'
+    			},
+          {
+    				date: '10/01/2020 16:24:47',
+    				text: 'non immagini male figliolo, lo stava urlando a Ornstein perchè non c\'è lo voleva mannà dentro l\'abbisso',
+    				status: 'received'
+    			},
+    		]
+    	},
     ],
   },
   methods: {
