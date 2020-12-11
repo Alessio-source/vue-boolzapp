@@ -70,8 +70,10 @@
 
         <div class="right">
           <div class="contact">
-            <img :src="'css/img/profiles/avatar' + contacts[0].avatar + '.png'" alt="">
-            <p>{{ contacts[0].name }}</p>
+            <span v-for="(contact, index) in contacts" v-if="contact.active == true">
+              <img :src="'css/img/profiles/avatar' + contacts[index].avatar + '.png'" alt="">
+              <p>{{ contacts[index].name }}</p>
+            </span>
 
             <div class="icons">
               <i class="fas fa-search"></i>
@@ -80,8 +82,8 @@
             </div>
           </div>
 
-          <div class="messages">
-            <div class="" v-for="(message, index) in contacts[0].messages" v-bind:class="{received: message.status == 'received', sent: message.status == 'sent'}">
+          <div class="messages" v-for="(contact, index) in contacts" v-if="contact.active == true">
+            <div class="" v-for="(message) in contacts[index].messages" v-bind:class="{received: message.status == 'received', sent: message.status == 'sent'}">
               <p>{{ message.text }} <span>{{ message.date }}</span></p>
             </div>
           </div>
