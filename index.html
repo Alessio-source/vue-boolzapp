@@ -52,6 +52,20 @@
             <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
           </section>
 
+          <section class="list">
+            <div class="container" v-for="(contact, index) in contacts">
+
+              <div class="">
+                <img :src="'css/img/profiles/avatar' + contact.avatar + '.png'" alt="">
+              </div>
+
+              <div class="">
+                <p>{{contact.name}}</p>
+              </div>
+
+            </div>
+          </section>
+
         </div>
 
         <div class="right">
