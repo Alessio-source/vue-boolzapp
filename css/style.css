@@ -88,3 +88,35 @@ main {
 .user .icons i:not(:last-child) {
   margin-right: 20px;
 }
+
+.notify {
+  display: flex;
+  padding: 15px;
+  background-color: #8EDAFC;
+}
+
+.notify .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  background-color: white;
+  color: #8EDAFC;
+}
+
+.notify .testi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notify .testi p:last-child {
+  color: #5d7485;
+  font-size: 0.9em;
+  text-decoration: underline;
+  cursor: pointer;
+}
