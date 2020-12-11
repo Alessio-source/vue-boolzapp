@@ -11,7 +11,7 @@ var app = new Vue({
     		name: 'Michele',
     		avatar: '-1',
     		visible: true,
-        active: false,
+        active: true,
     		messages: [
     			{
     				date: '10/01/2020 15:30:55',

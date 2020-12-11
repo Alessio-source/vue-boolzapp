@@ -162,4 +162,66 @@ main {
 .list .container div img {
   width: 60px;
   height: 60px;
+  border-radius: 50%;
+}
+
+.right .contact {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #EAEAEA;
+}
+
+.right .contact img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.right .contact p {
+  margin-left: 10px;
+}
+
+.messages {
+  width: 100%;
+  height: calc(100% - 80px);
+  background-image: url("img/background.png");
+  background-position: left;
+  background-size: contain;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.received p {
+  position: relative;
+  display: inline-block;
+  padding: 15px 50px 20px 15px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.sent {
+  margin-left: auto;
+}
+
+.sent p {
+  position: relative;
+  display: inline-block;
+  padding: 15px 50px 20px 15px;
+  border-radius: 10px;
+  background-color: #D5F9BA;
+  margin-bottom: 10px;
+}
+
+.received p span,
+.sent p span {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 0.6em;
+  color: grey;
+  padding-bottom: 5px;
 }
