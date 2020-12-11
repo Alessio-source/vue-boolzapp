@@ -202,7 +202,7 @@ main {
 
 .messages {
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 145px);
   background-image: url("img/background.png");
   background-position: left;
   background-size: contain;
@@ -216,8 +216,8 @@ main {
   display: inline-block;
   padding: 15px 50px 20px 15px;
   border-radius: 10px;
-  background-color: white;
   margin-bottom: 10px;
+  background-color: white;
 }
 
 .sent {
@@ -229,8 +229,8 @@ main {
   display: inline-block;
   padding: 15px 50px 20px 15px;
   border-radius: 10px;
-  background-color: #D5F9BA;
   margin-bottom: 10px;
+  background-color: #D5F9BA;
 }
 
 .received p span,
@@ -239,6 +239,29 @@ main {
   bottom: 0px;
   right: 0px;
   font-size: 0.6em;
-  color: grey;
   padding-bottom: 5px;
+  color: grey;
+}
+
+.text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #F3EEEA;
+}
+
+.text i {
+  font-size: 1.3em;
+  color: #6B7376;
+  cursor: pointer;
+}
+
+.text input[type="text"] {
+  width: 80%;
+  margin: 0 40px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
 }
