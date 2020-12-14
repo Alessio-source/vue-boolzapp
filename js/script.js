@@ -132,12 +132,12 @@ var app = new Vue({
     search: "",
   },
   methods: {
-    clickContact: function (index) {
+    clickContact: function (arr, index) {
 
-      for (let i = 0; i < this.contacts.length; i++) {
+      for (let i = 0; i < this.contacts.length ; i++) {
         this.contacts[i].active = false;
       }
-      this.contacts[index].active = true;
+      arr[index].active = true;
     },
     sendMessage: function() {
       var testo = this.messageUser;

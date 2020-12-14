@@ -53,7 +53,7 @@
           </section>
 
           <section class="list">
-            <div class="container" v-for="(contact, index) in filterContact" @click="clickContact(index)" v-bind:class="{ active: contacts[index].active}">
+            <div class="container" v-for="(contact, index) in filterContact" @click="clickContact(filterContact, index)" v-bind:class="{ active: filterContact[index].active}">
 
               <div class="">
                 <img :src="'css/img/profiles/avatar' + contact.avatar + '.png'" alt="">
