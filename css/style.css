@@ -38,6 +38,8 @@ main {
 }
 
 .left {
+  display: flex;
+  flex-direction: column;
   width: 35%;
   height: 100%;
   border-right: 1px solid #D6D6D6;
@@ -50,15 +52,19 @@ main {
 
 .user {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 10px 15px;
   background-color: #EAEAEA;
 }
 
 .info {
-  width: 70%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .user .info img {
@@ -74,9 +80,7 @@ main {
 
 .user .icons {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  width: 30%;
   font-size: 1.3em;
   color: #B1B1B1;
 }
@@ -91,6 +95,7 @@ main {
 
 .notify {
   display: flex;
+  flex-wrap: wrap;
   padding: 15px;
   background-color: #8EDAFC;
 }
@@ -122,6 +127,8 @@ main {
 }
 
 .search {
+  display: flex;
+  align-items: center;
   padding: 15px;
 }
 
@@ -141,8 +148,9 @@ main {
 
 .list {
   width: 100%;
-  min-height:100px;
-  max-height: 703px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
 }
 
@@ -216,6 +224,7 @@ main {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .received p {
@@ -225,6 +234,7 @@ main {
   border-radius: 10px;
   margin-bottom: 10px;
   background-color: white;
+  max-width: 80%;
 }
 
 .sent {
