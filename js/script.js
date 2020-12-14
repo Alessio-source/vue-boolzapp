@@ -128,6 +128,7 @@ var app = new Vue({
     		]
     	},
     ],
+    messageUser: "",
   },
   methods: {
     clickContact: function (index) {
@@ -137,5 +138,40 @@ var app = new Vue({
       }
       this.contacts[index].active = true;
     },
+    sendMessage: function() {
+      var testo = this.messageUser;
+      this.contacts.forEach(
+        function(element) {
+          if(element.active == true) {
+            element.messages.push(
+              {
+                date: currentDate(),
+                text: testo,
+                status: 'sent'
+              },
+            );
+
+            var intervalOk = setInterval(
+              function(){
+                element.messages.push({
+                  date: currentDate(),
+                  text: 'Ok',
+                  status: 'received'
+                },);
+                clearInterval(intervalOk);
+              },
+            1000);
+          }
+        }
+      );
+      this.messageUser = "";
+    },
   }
-})
+});
+
+function currentDate() {
+  var d = new Date();
+  var date = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+
+  return date;
+};
