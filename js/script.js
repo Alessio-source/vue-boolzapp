@@ -128,7 +128,8 @@ var app = new Vue({
     		]
     	},
     ],
-    messageUser: "",
+    messageUser: '',
+    search: "",
   },
   methods: {
     clickContact: function (index) {
@@ -166,6 +167,11 @@ var app = new Vue({
       );
       this.messageUser = "";
     },
+  },
+  computed: {
+    filterContact: function() {
+      return this.contacts.filter((contact) => { return contact.name.toLowerCase().match(this.search.toLowerCase()); });
+    }
   }
 });
 

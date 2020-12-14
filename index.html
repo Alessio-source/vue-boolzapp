@@ -49,11 +49,11 @@
 
           <section class="search">
             <i class="fas fa-search"></i>
-            <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+            <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat" v-model="search">
           </section>
 
           <section class="list">
-            <div class="container" v-for="(contact, index) in contacts" @click="clickContact(index)" v-bind:class="{ active: contacts[index].active}">
+            <div class="container" v-for="(contact, index) in filterContact" @click="clickContact(index)" v-bind:class="{ active: contacts[index].active}">
 
               <div class="">
                 <img :src="'css/img/profiles/avatar' + contact.avatar + '.png'" alt="">
